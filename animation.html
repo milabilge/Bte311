@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation</title>
+  <style>
+    body {
+      margin: 25px;
+      overflow: hidden;
+      background-color: white;
+        display: flex } 
+
+    .square {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      animation: moveSquare 5s infinite alternate, rotateSquare 4s infinite linear, fadeSquare 3s infinite alternate; /* Hareket, dönme ve transparanlık animasyonları */
+    }
+
+    .square:nth-child(1) {
+      background-color: rgba(52, 152, 219, 0.9);
+      top: 50%;
+      left: 50%;
+    }
+
+    .square:nth-child(2) {
+      background-color: rgba(231, 76, 60, 0.7);
+      top: 30%;
+      left: 30%;
+      animation-delay: 1s;
+    }
+
+    .square:nth-child(3) {
+      background-color: rgba(46, 204, 113, 0.5);
+      top: 100%;
+      left: 100%;
+      animation-delay: 2s;
+    }
+   
+    @keyframes moveSquare {
+      to {
+        transform: translateX(80vw) translateY(80vh);
+      }
+    }
+    @keyframes moveSquare {
+          0%   { left:0px; top:0px;}
+          
+          50%  { left:0px; top:200px;}
+          
+          100% { left:0px; top:0px;}
+        }
+        @keyframes moveSquare {
+          0%   { right: 30px; top:0px;}
+          
+          50%  { right: 0px; top:400px;}
+          
+          100% { left:0px; top:0px;}
+        }
+    @keyframes rotateSquare {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes fadeSquare {
+      to {
+        opacity: 0.2;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="square"></div>
+  <div class="square"></div>
+  <div class="square"></div>
+</body>
+</html>
