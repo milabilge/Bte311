@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Layout</title>
+  <style>
+    .grid-cont { gap: 10px;  display: grid;
+      grid-template-columns: repeat(3, 170px);
+    }
+
+  .grid-it.AD { .grid-item {text-align: center;}
+        padding: 50px;
+      grid-column: span 3;
+    }
+
+    .grid-it.BCD {
+        padding:50px;
+      grid-column: span 1;
+      grid-row: span 2;
+    }
+
+    .grid-it.E {
+        padding: 50px;
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    .grid-it.F {
+      grid-column: span 1;
+      grid-row: span 2;
+      padding: 50px;  }
+  </style>
+</head>
+    <body>
+        <h1> ->  Grid Layout</h1>
+        <center>
+  <div class="grid-cont">
+    <div class="grid-it AD" style="background-color: royalblue">A</div>
+    <div class="grid-it BCD" style="background-color: hotpink">B</div>
+    <div class="grid-it BCD" style="background-color: greenyellow">C</div>
+    <div class="grid-it BCD" style="background-color: orange" >D</div>
+    <div class="grid-it E" style="background-color: yellow">E</div>
+    <div class="grid-it F" style="background-color: plum">F</div>
+    <div class="grid-it AD" style="background-color: mediumseagreen">G</div> </div>
+</center>
+    </body>
+
+</html>
