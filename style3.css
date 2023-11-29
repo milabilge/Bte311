@@ -1,0 +1,29 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    font-family: monospace;
+    font-size: 15px;
+}
+
+.table-bote1 {
+    background-color: cadetblue;
+
+}
+
+.table-ooe1 {
+    background-color: palevioletred;
+}
+table th {
+    color: rgb(0, 0, 0);
+    text-align: left;
+}
+
+table tr:nth-child(odd) {
+    background-color: palegreen; }
