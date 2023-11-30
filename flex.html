@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Görev 1(Flex)</title>
+    <style>
+
+    
+        body{ background-color: palevioletred;}
+        .container{
+            display: flex;
+            justify-content: space-between;
+ }
+        .section{
+            flex:1;
+            background-color: whitesmoke;
+            color: black;
+            padding: 30px;
+            text-align: center;
+            margin:20px;
+        }
+        .section1{
+            flex:1;
+            background-color: plum;
+            color: black;
+            padding: 30px;
+            text-align: center;
+            margin:20px;
+        }
+        @media screen and (max-width: 700px) {
+            .container{flex-direction: row;}
+}
+@media screen and (max-width: 600px) {
+    .container{flex-direction: column;}
+.container>div{ 
+width: 80%;
+}
+
+     
+</style>
+</head>
+<body> 
+    <div class="container">
+    <div class="section">Kapak</div>
+    <div class="section">İçindekiler</div>
+    <div class="section">Önsöz</div>
+    <div class="section">Bölüm 1</div>
+    <div class="section">Bölüm 2</div>
+    <div class="section1">Login</div>  </div>
+</body>
+</html>
