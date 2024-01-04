@@ -1,26 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <title> Rastgele resim</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: cover;
+            transition: background-image 1s ease-in-out;
+        }
+        button {
+            margin: 5px;
+            padding: 8px 16px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        var images = [
+            'a.jpg', 'b.jpg', 'c.jpg', 'd.jpg', 'e.jpg',
+            'f.jpg', 'g.jpg', 'h.jpg', 'j.jpg', 'k.jpg'
+        ];
+
+        function updateBackground() {
+            var randomIndex = Math.floor(Math.random() * images.length);
+            document.body.style.backgroundImage = 'url(' + images[randomIndex] + ')';
+        }
+
+        function toggleImage(imageId) {
+            var imageElement = document.getElementById(imageId);
+            imageElement.style.display = (imageElement.style.display === 'none') ? 'block' : 'none';
+        }
+    </script>
 </head>
-<body>
-   <img src="a.jpg" id="resim" width="50%">
-   <script>
-    var dizi=["#D24D57","#e74c3c","#f1c40f","#2c3e50","#8e44ad","#bdc3c7","#1abc9c","#3498db","#95a5a6"];
-    var renk=document.getElementById("renk");
-    renk.onclick=function(){
-    var rasgele=Math.floor(Math.random()*dizi.length);
-    document.body.style.backgroundColor=dizi[rasgele];
-    }
-<script>
-    var res=document.getElementById("resim")
-    var liste=new Array("a.jpg", "b.jpg","c.jpg", "d.jpg", "e.jpg", "f.jpg", "g.jpg", "h.jpg", "j.jpg", "k.jpg" );
-    var r=Math.floor(liste.length*Math.random());
-    res.src=liste[r];
-     <button onclick="gorseligizle()">Gizle</button>
-</script>
+<body onload="updateBackground()">
+    <button onclick="toggleImage('image1')">Resim 1 Göster/Gizle</button>
+    <button onclick="toggleImage('image2')">Resim 2 Göster/Gizle</button>
+    <button onclick="toggleImage('image3')">Resim 3 Göster/Gizle</button>
+
+    <img id="image1" src="a.jpg" style="display: block;" alt="Resim 1">
+    <img id="image2" src="b.jpg" style="display: block;" alt="Resim 2">
+    <img id="image3" src="c.jpg" style="display: block;" alt="Resim 3">
+
+    <script>
+
+        window.onload = updateBackground;
+    </script>
 </body>
 </html>
