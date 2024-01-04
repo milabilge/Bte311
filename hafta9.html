@@ -34,7 +34,7 @@
 
         function toggleImage(imageId) {
             var imageElement = document.getElementById(imageId);
-            imageElement.style.display = (imageElement.style.display === 'none') ? 'block' : 'none';
+            imageElement.style.display = (imageElement.style.display === 'none' || imageElement.style.display === '') ? 'block' : 'none';
         }
     </script>
 </head>
@@ -43,12 +43,13 @@
     <button onclick="toggleImage('image2')">Resim 2 Göster/Gizle</button>
     <button onclick="toggleImage('image3')">Resim 3 Göster/Gizle</button>
 
+    <!-- 3 farklı resim elementi -->
     <img id="image1" src="a.jpg" style="display: block;" alt="Resim 1">
     <img id="image2" src="b.jpg" style="display: block;" alt="Resim 2">
     <img id="image3" src="c.jpg" style="display: block;" alt="Resim 3">
 
     <script>
-
+        // Sayfa yenilendiğinde arka planı güncelle
         window.onload = updateBackground;
     </script>
 </body>
