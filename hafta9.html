@@ -20,8 +20,15 @@
     var liste=new Array("a.jpg", "b.jpg","c.jpg", "d.jpg", "e.jpg", "f.jpg", "g.jpg", "h.jpg", "j.jpg", "k.jpg" );
     var r=Math.floor(liste.length*Math.random());
     res.src=liste[r];
-</script>
 
+  <button onclick="toggleImage('image1')">Resim 1 Göster/Gizle</button>
+    <button onclick="toggleImage('image2')">Resim 2 Göster/Gizle</button>
+    <button onclick="toggleImage('image3')">Resim 3 Göster/Gizle</button>
+
+    <!-- 3 farklı resim elementi -->
+    <img id="image1" src="image1.jpg" style="display: block;" alt="Resim 1">
+    <img id="image2" src="image2.jpg" style="display: block;" alt="Resim 2">
+    <img id="image3" src="image3.jpg" style="display: block;" alt="Resim 3">
      
      
     </script>
